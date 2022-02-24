@@ -1,0 +1,168 @@
+@import url(font.css);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --primary: #ffb6b9;
+    --secondary: #fae3d9;
+    --withe: #fff;
+    --borderRadius: 5px;
+    --padding: 10px;
+    --borderColor: #8ac6d1;
+    --transition: all .3s ease-in;
+    --fontColor: rgba(187, 222, 214, 1);
+}
+
+
+/* body */
+
+body {
+    background: var(--secondary);
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* container */
+
+.container {
+    width: 1400px;
+    margin: auto;
+}
+
+
+/* header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+header h1 {
+    font-family: initial;
+}
+
+
+/* input sections */
+
+#to-to-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.to-do-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.input-to-do-list {
+    width: 40%;
+}
+
+.selected {
+    width: 15%;
+    position: relative;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.selected i {
+    position: absolute;
+    top: 16%;
+    right: 10%;
+    font-size: 27px;
+}
+
+select {
+    padding: 0.9rem;
+    border-radius: var(--borderRadius);
+    border: none;
+    border: 1px solid var(--borderColor);
+    appearance: none;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+form {
+    background-color: var(--withe);
+    width: 34em;
+    display: flex;
+    border-radius: var(--borderRadius);
+    border: 1px solid #8ac6d1;
+}
+
+form:focus {
+    border: 2px solid var(--borderColor);
+}
+
+form input {
+    flex: 1;
+    border-radius: 5px 0 0 5px;
+}
+
+form button {
+    border-radius: 0 5px 5px 5px;
+    cursor: pointer;
+}
+
+form button i {
+    color: var(--primary);
+    font-size: 18px;
+}
+
+form input,
+form button {
+    border: none;
+    outline: none;
+    background-color: var(--withe);
+    padding: var(--padding);
+}
+
+.my-to-do {
+    width: 51%;
+    justify-content: center;
+    position: relative;
+}
+
+.to-do-list {
+    width: 70%;
+    background-color: var(--primary);
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--padding);
+    border-radius: var(--borderRadius);
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.icons {
+    flex: 1
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.icons i:hover {
+    transition: var(--transition);
+    color: var(--secondary);
+}
+
+.completed {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
